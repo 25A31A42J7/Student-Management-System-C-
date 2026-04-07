@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+class Student {
+public:
+    int id;
+    string name;
+    float marks;
+
+    void input() {
+        cout << "Enter ID, Name, Marks: ";
+        cin >> id >> name >> marks;
+    }
+
+    void display() {
+        cout << "ID: " << id << " Name: " << name << " Marks: " << marks << endl;
+    }
+};
+
+int main() {
+    Student s[3];
+
+    for(int i = 0; i < 3; i++) {
+        s[i].input();
+    }
+
+    cout << "\nStudent Records:\n";
+    for(int i = 0; i < 3; i++) {
+        s[i].display();
+    }
+
+    return 0;
+}
